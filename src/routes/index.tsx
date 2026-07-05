@@ -1,7 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { HeroSection } from "@/components/layouts/hero-section";
 
 export const Route = createFileRoute("/")({ component: App });
 
 function App() {
-	return <main className="page-wrap px-4 pb-8 pt-14"></main>;
+  return (
+    <main className="">
+      <HeroSection />
+    </main>
+  );
 }
