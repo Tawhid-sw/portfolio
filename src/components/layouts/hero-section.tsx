@@ -42,7 +42,12 @@ export function HeroSection() {
     <section className="relative w-full flex items-center justify-center bg-background px-4 py-8 md:mt-8 -mt-2 sm:px-8 overflow-hidden">
       <div className="relative w-full max-w-[1440px] z-10 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-10 w-full h-full relative">
-          <div className="absolute inset-0 z-0 pointer-events-none">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="absolute inset-0 z-0 pointer-events-none"
+          >
             <LightRays
               raysOrigin={raysOrigin as "top-center" | "left"}
               className="absolute inset-0"
@@ -58,7 +63,7 @@ export function HeroSection() {
               fadeDistance={0.6}
               saturation={1}
             />
-          </div>
+          </motion.div>
 
           <motion.div
             variants={drawHorizontal}
